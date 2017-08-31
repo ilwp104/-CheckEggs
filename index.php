@@ -14,9 +14,9 @@
         <input type="text" name="string" value="">
         <select class="" name="matchSelect">
           <option value="select">전체보기</option>
-          <option value="난각번호"></option>
-          <option value="농가명"></option>
-          <option value="주소"></option>
+          <option value="난각코드">난각코드</option>
+          <option value="농가명">농가명</option>
+          <option value="주소">주소</option>
         </select>
         <input type="submit" name="" value="검색">
       </form>
