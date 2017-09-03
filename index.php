@@ -3,42 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>EggCheck</title>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-    <header>
-      <p>살충제 검출 달걀 확인</p>
-    </header>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
-    <article class="">
-      <form class="" action="match.php" method="post">
-        <input type="text" name="string" value="">
-        <select class="" name="matchSelect">
-          <option value="select">전체보기</option>
-          <option value="난각코드">난각코드</option>
-          <option value="농가명">농가명</option>
-          <option value="주소">주소</option>
-        </select>
-        <input type="submit" name="" value="검색">
-      </form>
-    </article>
 
-    <article class="">
+  <?php
+    require_once("/head.html");
+  ?>
+
+
+    <article class="wrapTable">
       <table>
         <tr>
-          <td>연번</td>
-          <td>시도</td>
+          <td style="width : 30px">연번</td>
+          <td style="width : 30px">시도</td>
           <td>농가명</td>
           <td>주소</td>
-          <td>사육규모<br />(수)</td>
-          <td>생산량</td>
-          <td>인증사항</td>
-          <td>검사기관</td>
-          <td>시료 채취일</td>
-          <td>검출농약</td>
-          <td>검출양<br />(mg/kg)</td>
-          <td>기준치<br />(mg/kg)</td>
+          <td style="width : 60px">사육규모<br />(수)</td>
+          <td style="width : 60px">생산량</td>
+          <td style="width : 60px">인증사항</td>
+          <td style="width : 60px">검사기관</td>
+          <td style="width : 80px">시료채취일</td>
+          <td style="width : 60px">검출농약</td>
+          <td style="width : 50px">검출양<br />(mg/kg)</td>
+          <td style="width : 50px">기준치<br />(mg/kg)</td>
           <td>난각코드</td>
         </tr>
+
           <?php
             require_once("/DB/DBinfo.php");
         		$connect = mysql_connect($hostname,$username,$passwd) or die("connect 실패");
@@ -69,5 +62,23 @@
       </table>
 
     </article>
+
+    <script type="text/javascript">
+      $(window).scroll(function() {
+         if ($(window).scrollTop() > 150) {
+           $("header").css("position","fixed");
+           $("header").css("padding-top","150px");
+           $("header").css("top","-150px");
+           $("header").css("transition","padding .5s");
+
+         }
+         else {
+           $("header").css("position","absolute");
+           $("header").css("padding-top","0");
+           $("header").css("top","0");
+           $("header").css("transition","padding .3s");
+         }
+       });
+    </script>
   </body>
 </html>
