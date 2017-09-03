@@ -1,0 +1,53 @@
+
+header{
+  background : linear-gradient(to bottom,#FBFFB9,#FDD692);
+  position: absolute;
+  height:  150px;
+  width: 100%;
+  min-width: 1000px;
+}
+
+.head{
+  margin: 0;
+  padding: 30px 0 30px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+
+}
+.form{
+  text-align: center;
+}
+.form>*{
+  height: 50px;
+  font-size: 20px;
+}
+.selcBtn{
+  height: 56px;
+  width: 200px;
+  border: 2px solid rgb(169, 169, 169);
+}
+.input{
+  width: 350px;
+  border: 2px solid rgb(169, 169, 169);
+}
+.subBtn{
+  border: 2px solid rgb(169, 169, 169);
+}
+
+
+.wrapTable{
+  width: 95%;
+  margin: auto;
+  padding-top: 150px;
+
+}
+table{
+  margin: auto;
+  font-size: 13px;
+  text-align: center;
+}
+body{
+  margin : 0;
+  min-width: 1000px;
+}
