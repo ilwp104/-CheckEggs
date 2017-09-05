@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>EggCheck</title>
-    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="./css/main.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
   <?php
-    require_once("/head.html");
+    include("./head.html");
   ?>
+
 
 
     <article class="wrapTable">
@@ -33,11 +33,12 @@
         </tr>
 
           <?php
-            require_once("/DB/DBinfo.php");
+            include("./DB/DBinfo.php");
         		$connect = mysql_connect($hostname,$username,$passwd) or die("connect 실패");
         		$db_con=mysql_select_db($dbname,$connect)or die("db연결 실패");
         		$sql = "select * from EggCheck";
         		$result = mysql_query($sql,$connect) or die("sql 실패");
+            mysql_query("SET NAMES utf8",$connect);
         		while ($row=mysql_fetch_array($result)) {
               echo "<tr>";
           			echo "
@@ -65,18 +66,27 @@
 
     <script type="text/javascript">
       $(window).scroll(function() {
-         if ($(window).scrollTop() > 150) {
+        if ($(window).scrollTop() <= 200) {
+          $("header").css("height","200px");
+          $(".head").css("font-size","50px");
+          $("header").css("position","absolute");
+          $("header").css("padding-top","0");
+          $("header").css("top","0");
+          $("header").css("transition","padding .0s");
+        }
+         else if ($(window).scrollTop() > 200 && $(window).scrollTop() <= 350) {
+           $("header").css("height","150px");
+           $(".head").css("font-size","20px");
            $("header").css("position","fixed");
-           $("header").css("padding-top","150px");
-           $("header").css("top","-150px");
-           $("header").css("transition","padding .5s");
-
+           $("header").css("padding-top",$(window).scrollTop());
+           $("header").css("top","-350px");
          }
-         else {
-           $("header").css("position","absolute");
-           $("header").css("padding-top","0");
-           $("header").css("top","0");
-           $("header").css("transition","padding .3s");
+         else if ($(window).scrollTop() > 350) {
+           $("header").css("height","150px");
+           $(".head").css("font-size","20px");
+           $("header").css("position","fixed");
+           $("header").css("padding-top","350px");
+           $("header").css("top","-350px");
          }
        });
     </script>
