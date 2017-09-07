@@ -1,0 +1,94 @@
+.fixmenu{
+  background : linear-gradient(to bottom,#FBFFB9,#FDD692);
+  position: absolute;
+  height:  200px;
+  width: 100%;
+  min-width: 1000px;
+}
+
+.slidemenu{
+  top: -160px;
+  background : linear-gradient(to bottom,#FBFFB9,#FDD692);
+  position: absolute;
+  height:  160px;
+  width: 100%;
+  min-width: 1000px;
+}
+.slidemenu .head{
+  margin: 0;
+  padding: 30px 0 30px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.fixmenu .head{
+  margin: 0;
+  padding: 30px 0 30px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
+.form{
+  text-align: center;
+}
+.form>*{
+  height: 50px;
+  font-size: 20px;
+}
+.selcBtn{
+  height: 56px;
+  width: 200px;
+  border: 2px solid rgb(169, 169, 169);
+}
+.input{
+  width: 350px;
+  border: 2px solid rgb(169, 169, 169);
+}
+.subBtn{
+  border: 2px solid rgb(169, 169, 169);
+}
+
+
+.wrapTable{
+  width: 95%;
+  margin: auto;
+  padding-top: 200px;
+  padding-bottom: 30px;
+}
+table{
+  margin: auto;
+  font-size: 13px;
+  text-align: center;
+}
+body{
+  margin : 0;
+  min-width: 1000px;
+}
+@media screen and (max-device-width : 800px) {
+  header{
+    min-width: 0;
+    height : 160px;
+  }
+  .wrapTable{
+    padding-top : 160px;
+  }
+
+  .head{
+    font-size: 30px;
+  }
+  .selcBtn{
+    height: 46px;
+    width: 120px;
+  }
+  .input{
+    height: 42px;
+    width: 150px;
+  }
+  .subBtn{
+    width: 55px;
+    height: 47px;
+  }
+  body{
+    min-width: 0;
+  }
+}
