@@ -43,11 +43,23 @@ header{
   padding-top: 200px;
   padding-bottom: 30px;
 }
+thead tr td {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 2px 0 2px;
+}
+
 table{
   margin: auto;
   font-size: 13px;
   text-align: center;
+  border-collapse: collapse;
 }
+th, td {
+  border-bottom: 1px solid #444444;
+  padding: 10px;
+}
+
 body{
   margin : 0;
   min-width: 1000px;
