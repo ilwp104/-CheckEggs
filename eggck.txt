@@ -1,4 +1,4 @@
-create database EggCheck;
+create database eggcheck;
 
 create table EggCheck(
 	num int,
@@ -18,20 +18,20 @@ create table EggCheck(
 );
 
 
-create table EggCheck(
+create table eggcheck(
 	num int,
-	city char(10),
-	name char(30),
-	address char(50),
-	scale char(20),
-	product char(20),
-	certifications char(20),
-	InspectionAgency char(30),
-	collectionDay char(20),
-	nongyak char(20),
-	nongAmount char(20),
-	nongStandard char(20),
-	code char(50),
+	city text,
+	name text,
+	address text,
+	scale text,
+	product text,
+	certifications text,
+	InspectionAgency text,
+	collectionDay text,
+	nongyak text,
+	nongAmount text,
+	nongStandard text,
+	code text,
 	primary key(num)
 );
 
