@@ -1,5 +1,5 @@
 <?php
-  $start = "insert into EggCheck values(";
+  $start = "insert into eggcheck values(";
   $final = ");";
 
   $m1 = array("울산","미림농장","울산 울주군 언양읍","103,683","85,000","일반","지자체","8.1","비펜트린","0.06","0.01","07051");
@@ -61,7 +61,7 @@
 
   $num=1;
   for ($n=0; $n <29 ; $n++) {
-    echo "{$start}\"$num\",";
+    echo "{$start}{$num},";
     for ($i=0; $i <12 ; $i++) {
       if ($i==11) {
         echo "\"{$c1[$n][$i]}\"";
@@ -75,7 +75,7 @@
   }
 
   for ($n=0; $n <23 ; $n++) {
-    echo "{$start}\"$num\",";
+    echo "{$start}{$num},";
     for ($i=0; $i <12 ; $i++) {
       if ($i==11) {
         echo "\"{$c2[$n][$i]}\"";
