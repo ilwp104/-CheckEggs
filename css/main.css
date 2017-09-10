@@ -55,7 +55,7 @@ table{
   text-align: center;
   border-collapse: collapse;
 }
-th, td {
+td {
   border-bottom: 1px solid #444444;
   padding: 10px;
 }
@@ -63,4 +63,33 @@ th, td {
 body{
   margin : 0;
   min-width: 1000px;
+}
+
+@media screen and (max-device-width : 800px) {
+  header{
+    height : 160px;
+    min-width: 0;
+  }
+  .head{
+    font-size: 30px;
+  }
+  .wrapTable{
+    padding : 160px 0 30px 0;
+
+  }
+  .selcBtn{
+    height: 50px;
+    width: 110px;
+  }
+  .input{
+    width: 150px;
+    height: 45px;
+  }
+   .scale, .nongStandard, .adress, .product, .certifications, .InspectionAgency, .collectionDay, .nongyak {
+    display: none;
+  }
+  body{
+    margin : 0;
+    min-width: 0px;
+  }
 }
